@@ -77,7 +77,7 @@
           }
         },
         {
-          "name": "Deletar Aluno",
+          "name": "Apagar aluno",
           "request": {
             "method": "DELETE",
             "url": {
@@ -94,7 +94,7 @@
       "name": "Cursos",
       "item": [
         {
-          "name": "Listar Cursos",
+          "name": "Listar cursos",
           "request": {
             "method": "GET",
             "url": {
@@ -106,7 +106,7 @@
           }
         },
         {
-          "name": "Obter Curso por ID",
+          "name": "Obter curso por ID",
           "request": {
             "method": "GET",
             "url": {
@@ -118,7 +118,7 @@
           }
         },
         {
-          "name": "Criar Curso",
+          "name": "Criar curso",
           "request": {
             "method": "POST",
             "header": [
