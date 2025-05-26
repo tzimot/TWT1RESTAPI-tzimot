@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "9b0a6b59-6547-48bc-b39b-08e1a18da0df",
+		"name": "CRUD dos Alunos e Cursos (Timóteo Gres)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45324253",
+		"_collection_link": "https://lively-resonance-2265743.postman.co/workspace/Tim%C3%B3teo-Gres's-Workspace~3b378a2c-0afd-4008-829e-0911d6fe581c/collection/45324253-9b0a6b59-6547-48bc-b39b-08e1a18da0df?action=share&source=collection_link&creator=45324253"
+	},
+	"item": [
+		{
+			"name": "Alunos",
+			"item": [
+				{
+					"name": "Listar Alunos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/alunos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter alunos por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/alunos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alunos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar aluno",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Ana\",\n  \"apelido\": \"Santos\",\n  \"curso\": 1,\n  \"anoCurricular\": 3\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/alunos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Aluno",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Timóteo\",\n  \"apelido\": \"Gres\",\n  \"curso\": 1,\n  \"anoCurricular\": 3\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/alunos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alunos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Aluno",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/alunos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"alunos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cursos",
+			"item": [
+				{
+					"name": "Listar Cursos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/cursos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Curso por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/cursos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cursos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Curso",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nomeDoCurso\": \"Novo Curso de Engenharia\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/cursos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Curso",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nomeDoCurso\": \"Curso Atualizado\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/cursos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cursos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Curso",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/cursos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cursos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
