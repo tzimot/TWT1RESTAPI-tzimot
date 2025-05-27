@@ -3,6 +3,8 @@ require('dotenv').config(); // **IMPORTANTE** carregar o .env primeiro
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./docs/swagger');
 
 const alunoRoutes = require('./routes/alunoRoutes');
 const cursoRoutes = require('./routes/cursoRoutes');
@@ -31,6 +33,9 @@ mongoose.connect(mongoUri)
 app.get("/", (req, res) => {
   res.send("<h1>Página errada... :(</h1>");
 });
+
+// Adicionar antes das rotas
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Usar as rotas
 app.use('/alunos', alunoRoutes);
