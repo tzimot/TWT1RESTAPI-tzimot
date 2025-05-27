@@ -1,5 +1,5 @@
 // Configuração da API
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://api.render.com/deploy/srv-d0r0gcu3jp1c739c61k0?key=VNOUAfGNpos';
 
 const alunoForm = document.getElementById('alunoForm');
 const alunoIdInput = document.getElementById('alunoId');
