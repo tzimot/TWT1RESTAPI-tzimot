@@ -14,6 +14,7 @@ async function carregarCursos() {
     try {
         const response = await fetch(`${API_URL}/cursos`);
         const cursos = await response.json();
+        console.log('Cursos carregados:', cursos);  // <-- Verifica aqui
         
         cursoSelect.innerHTML = '';
         cursos.forEach(curso => {
@@ -32,6 +33,7 @@ async function carregarAlunos() {
     try {
         const response = await fetch(`${API_URL}/alunos`);
         const alunos = await response.json();
+        console.log('Alunos carregados:', alunos);  // <-- Verifica aqui
         
         alunosTableBody.innerHTML = '';
         alunos.forEach(aluno => {
@@ -42,8 +44,8 @@ async function carregarAlunos() {
                 <td>${getCursoNome(aluno.curso)}</td>
                 <td>${aluno.anoCurricular}</td>
                 <td>
-                    <button class="btn-editar" onclick="editarAluno('${aluno.id}')">Editar</button>
-                    <button class="btn-apagar" onclick="apagarAluno('${aluno.id}')">Apagar</button>
+                    <button class="btn-editar" onclick="editarAluno('${aluno._id}')">Editar</button>
+                    <button class="btn-apagar" onclick="apagarAluno('${aluno._id}')">Apagar</button>
                 </td>
             `;
             alunosTableBody.appendChild(tr);
@@ -55,7 +57,9 @@ async function carregarAlunos() {
 }
 
 function getCursoNome(cursoId) {
+    console.log('Procurando cursoId:', cursoId);
     const option = cursoSelect.querySelector(`option[value="${cursoId}"]`);
+    console.log('Encontrou option:', option);
     return option ? option.textContent : 'Curso não encontrado';
 }
 
@@ -64,10 +68,11 @@ async function salvarAluno(event) {
     
     const aluno = {
         nome: nomeInput.value,
-        apelido: apelidoInput.value,
-        curso: parseInt(cursoSelect.value),
+        apelido: apelidoInput.value,  // Aqui tem que estar preenchido
+        curso: cursoSelect.value,     // deixa como string se o schema espera string
         anoCurricular: parseInt(anoCurricularInput.value)
     };
+    
 
     try {
         const url = alunoIdInput.value
@@ -76,6 +81,7 @@ async function salvarAluno(event) {
             
         const method = alunoIdInput.value ? 'PUT' : 'POST';
         
+        // Aqui fazes o fetch e guardas a resposta
         const response = await fetch(url, {
             method: method,
             headers: {
@@ -84,8 +90,12 @@ async function salvarAluno(event) {
             body: JSON.stringify(aluno)
         });
 
+        // Depois deste ponto é que podes usar response
+        const data = await response.json();
+        console.log('Resposta da API ao salvar:', data);
+
         if (!response.ok) throw new Error('Erro ao salvar aluno');
-        
+
         limparFormulario();
         carregarAlunos();
         alert('Aluno salvo com sucesso!');
@@ -100,7 +110,7 @@ async function editarAluno(id) {
         const response = await fetch(`${API_URL}/alunos/${id}`);
         const aluno = await response.json();
         
-        alunoIdInput.value = aluno.id;
+        alunoIdInput.value = aluno._id;
         nomeInput.value = aluno.nome;
         apelidoInput.value = aluno.apelido;
         cursoSelect.value = aluno.curso;

@@ -1,0 +1,30 @@
+[
+    {
+      "nome": "Ana",
+      "apelido": "Santos",
+      "curso": 6303,
+      "anoCurricular": 3,
+      "id": "9927"
+    },
+    {
+      "id": "350",
+      "nome": "Timóteo",
+      "apelido": "Gres",
+      "curso": 1,
+      "anoCurricular": 2
+    },
+    {
+      "id": "1ab0",
+      "nome": "João",
+      "apelido": "Vieitas",
+      "curso": 1,
+      "anoCurricular": 2
+    },
+    {
+      "id": "8478",
+      "nome": "Pedro",
+      "apelido": "Pedroso",
+      "curso": 6303,
+      "anoCurricular": 4
+    }
+  ]
