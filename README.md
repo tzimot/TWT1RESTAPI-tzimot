@@ -75,10 +75,13 @@ O projeto simula o ciclo completo de desenvolvimento de uma aplicação web com 
 - (Opcional) Fazer deploy da API no [Render](https://render.com)
 - Adaptar o front-end para consumir a nova API
 
-📄 Incluir no `README.md`:
+# URLs da Aplicação
 
-- URL pública do front-end
-- URL da API real
+## Frontend
+- URL: https://tw-trab1-restapi-tzimot.vercel.app/
+
+## API
+- URL: https://twt1restapi-tzimot.onrender.com/
 - 📄 Entregável: Links funcionais no repositório
 
 ---
