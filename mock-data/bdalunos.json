@@ -1,30 +1,92 @@
 [
-    {
-      "nome": "Ana",
-      "apelido": "Santos",
-      "curso": 6303,
-      "anoCurricular": 3,
-      "id": "9927"
-    },
-    {
-      "id": "350",
-      "nome": "Timóteo",
-      "apelido": "Gres",
-      "curso": 1,
-      "anoCurricular": 2
-    },
-    {
-      "id": "1ab0",
-      "nome": "João",
-      "apelido": "Vieitas",
-      "curso": 1,
-      "anoCurricular": 2
-    },
-    {
-      "id": "8478",
-      "nome": "Pedro",
-      "apelido": "Pedroso",
-      "curso": 6303,
-      "anoCurricular": 4
-    }
-  ]
+  {
+    "nome": "Timoteo",
+    "apelido": "Gres",
+    "anoCurricular": 1,
+    "curso": "2"
+  },
+  {
+    "nome": "Ana",
+    "apelido": "Silva",
+    "anoCurricular": 3,
+    "curso": "5"
+  },
+  {
+    "nome": "Maria",
+    "apelido": "Fernandes",
+    "anoCurricular": 2,
+    "curso": "8"
+  },
+  {
+    "nome": "Joao",
+    "apelido": "Alves",
+    "anoCurricular": 1,
+    "curso": "1"
+  },
+  {
+    "nome": "Carla",
+    "apelido": "Moura",
+    "anoCurricular": 3,
+    "curso": "11"
+  },
+  {
+    "nome": "Pedro",
+    "apelido": "Rodrigues",
+    "anoCurricular": 2,
+    "curso": "3"
+  },
+  {
+    "nome": "Sandra",
+    "apelido": "Pinto",
+    "anoCurricular": 1,
+    "curso": "7"
+  },
+  {
+    "nome": "Miguel",
+    "apelido": "Carvalho",
+    "anoCurricular": 3,
+    "curso": "4"
+  },
+  {
+    "nome": "Luisa",
+    "apelido": "Mendes",
+    "anoCurricular": 2,
+    "curso": "6"
+  },
+  {
+    "nome": "Ricardo",
+    "apelido": "Castro",
+    "anoCurricular": 1,
+    "curso": "9"
+  },
+  {
+    "nome": "Beatriz",
+    "apelido": "Araujo",
+    "anoCurricular": 3,
+    "curso": "10"
+  },
+  {
+    "nome": "Jorge",
+    "apelido": "Neves",
+    "anoCurricular": 2,
+    "curso": "2"
+  },
+  {
+    "nome": "Isabel",
+    "apelido": "Teixeira",
+    "anoCurricular": 1,
+    "curso": "1"
+  },
+  {
+    "nome": "André",
+    "apelido": "Dias",
+    "anoCurricular": 3,
+    "curso": "8"
+  },
+  {
+    "nome": "Patricia",
+    "apelido": "Oliveira",
+    "anoCurricular": 2,
+    "curso": "5"
+  }
+]

@@ -1,6 +1,6 @@
 const Curso = require('../models/Curso');
 
-// Listar todos os cursos
+// Listar todos os cursos 
 exports.getCursos = async (req, res) => {
   try {
     const cursos = await Curso.find();
@@ -10,7 +10,7 @@ exports.getCursos = async (req, res) => {
   }
 };
 
-// Criar novo curso
+// Criar novo curso (não usado no projeto)
 exports.createCurso = async (req, res) => {
   try {
     const novoCurso = new Curso(req.body);
@@ -21,7 +21,7 @@ exports.createCurso = async (req, res) => {
   }
 };
 
-// Atualizar curso
+// Atualizar curso (não usado no projeto)
 exports.updateCurso = async (req, res) => {
   const id = req.params.id;
   if (!id.match(/^[a-fA-F0-9]{24}$/)) {
@@ -38,7 +38,7 @@ exports.updateCurso = async (req, res) => {
   }
 };
 
-// Apagar curso
+// Apagar curso (não usado no projeto)
 exports.deleteCurso = async (req, res) => {
   const id = req.params.id;
   if (!id.match(/^[a-fA-F0-9]{24}$/)) {

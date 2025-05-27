@@ -14,7 +14,7 @@ async function carregarCursos() {
     try {
         const response = await fetch(`${API_URL}/cursos`);
         const cursos = await response.json();
-        console.log('Cursos carregados:', cursos);  // <-- Verifica aqui
+        console.log('Cursos carregados:', cursos);
         
         cursoSelect.innerHTML = '';
         cursos.forEach(curso => {
@@ -33,7 +33,7 @@ async function carregarAlunos() {
     try {
         const response = await fetch(`${API_URL}/alunos`);
         const alunos = await response.json();
-        console.log('Alunos carregados:', alunos);  // <-- Verifica aqui
+        console.log('Alunos carregados:', alunos);
         
         alunosTableBody.innerHTML = '';
         alunos.forEach(aluno => {
@@ -68,8 +68,8 @@ async function salvarAluno(event) {
     
     const aluno = {
         nome: nomeInput.value,
-        apelido: apelidoInput.value,  // Aqui tem que estar preenchido
-        curso: cursoSelect.value,     // deixa como string se o schema espera string
+        apelido: apelidoInput.value,
+        curso: cursoSelect.value,
         anoCurricular: parseInt(anoCurricularInput.value)
     };
     
@@ -80,8 +80,7 @@ async function salvarAluno(event) {
             : `${API_URL}/alunos`;
             
         const method = alunoIdInput.value ? 'PUT' : 'POST';
-        
-        // Aqui fazes o fetch e guardas a resposta
+
         const response = await fetch(url, {
             method: method,
             headers: {
@@ -90,7 +89,6 @@ async function salvarAluno(event) {
             body: JSON.stringify(aluno)
         });
 
-        // Depois deste ponto é que podes usar response
         const data = await response.json();
         console.log('Resposta da API ao salvar:', data);
 

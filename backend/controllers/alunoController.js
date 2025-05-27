@@ -1,7 +1,5 @@
 const Aluno = require('../models/Aluno');
 
-// Obter todos os alunos
-// Obter todos os alunos
 exports.getAlunos = async (req, res) => {
     try {
         const alunos = await Aluno.find();
@@ -11,7 +9,6 @@ exports.getAlunos = async (req, res) => {
     }
 };
 
-// Obter aluno pelo ID
 exports.getAlunoById = async (req, res) => {
     const id = req.params.id;
     if (!id.match(/^[a-fA-F0-9]{24}$/)) {
@@ -29,8 +26,6 @@ exports.getAlunoById = async (req, res) => {
     }
 };
 
-
-// Criar novo aluno
 exports.createAluno = async (req, res) => {
     try {
         console.log('REQ.BODY:', req.body);
@@ -43,7 +38,6 @@ exports.createAluno = async (req, res) => {
     }
 };
 
-// Atualizar aluno
 exports.updateAluno = async (req, res) => {
     const id = req.params.id;
     if (!id.match(/^[a-fA-F0-9]{24}$/)) {
@@ -61,7 +55,6 @@ exports.updateAluno = async (req, res) => {
     }
 };
 
-// Apagar aluno
 exports.deleteAluno = async (req, res) => {
     const id = req.params.id;
     if (!id.match(/^[a-fA-F0-9]{24}$/)) {

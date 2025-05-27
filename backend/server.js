@@ -1,5 +1,3 @@
-// backend/server.js
-
 require('dotenv').config(); // **IMPORTANTE** carregar o .env primeiro
 
 const express = require('express');
@@ -20,7 +18,7 @@ const mongoUri = process.env.MONGODB_URI || 'mongodb+srv://timoteogres:timoteogr
 // Conectar ao MongoDB Atlas
 mongoose.connect(mongoUri)
   .then(() => {
-    console.log("Conectado ao MongoDB Atlas");
+    console.log("Conexão feita com sucesso ao MongoDB Atlas");
     app.listen(port, () => {
       console.log(`Servidor a correr em http://localhost:${port}`);
     });
@@ -29,9 +27,9 @@ mongoose.connect(mongoUri)
     console.error("Erro ao conectar ao MongoDB:", err.message);
   });
 
-// Rota simples para teste
+// Rota default para teste
 app.get("/", (req, res) => {
-  res.send("<h1>Olá TW ECGM</h1>");
+  res.send("<h1>Página errada... :(</h1>");
 });
 
 // Usar as rotas
